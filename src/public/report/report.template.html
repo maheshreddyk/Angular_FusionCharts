@@ -1,0 +1,23 @@
+<p class="ibm-right"> <a  href="#" ng-click="$ctrl.remove({id: $ctrl.num})">X</a> </p>
+<p class="ibm-h3" ng-if="$ctrl.isDisabled && $ctrl.error.length <=0"> <span class="ibm-spinner" > </span>Loading
+</p>
+
+<span  class="ibm-textcolor-red-50" ng-if="{{$ctrl.error.length >0}}"> {{$ctrl.error}}</span>
+
+<div>
+    <div class="shWidget" id="shChartAttr_{{$ctrl.num}}" ng-click="$ctrl.showDiv = !$ctrl.showDiv">
+        <h2><i ng-class="$ctrl.showDiv ? 'fa fa-minus' : 'fa fa-plus'"></i>&nbsp;<strong> Select Chart Attributes</strong> </h2>
+      </div>
+        <div class="ibm-container-body" id="shChartAttr_{{$ctrl.num}}_body" ng-show="$ctrl.showDiv==true">
+            <span ng-repeat="col in $ctrl.columns" class="ibm-input-group ibm-checkbox-wrapper" style="margin-right:10px; margin-bottom:5px;">
+              <input   type="checkbox" class="ibm-styled-checkbox"   value="{{col.name}}"   ng-model="col.selected" name="cb_{{$ctrl.num}}_{{$index}}" id="cb_{{$ctrl.num}}_{{$index}}">
+              <label for="cb_{{$ctrl.num}}_{{$index}}"> {{col.name}}</label>
+            </span>
+            <p>
+             <label>Chart Type : </label> <span> <select name="dataSourceType" ng-model="$ctrl.chartType" ng-options="key as value for (key , value) in $ctrl.chartTypes" > </span>
+</p>
+          <p>      <input type="button" text="Update" ng-click="$ctrl.update()" value="Update" class="ibm-btn-pri  ibm-btn-small ibm-btn-blue-50" ng-disabled="$ctrl.isDisabled"/></p>
+        </div>
+        <div id="chart-container_{{$ctrl.num}}"> </div>
+    </select>
+</div>

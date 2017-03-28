@@ -1,0 +1,56 @@
+<div ng-controller="publicController as pubCtrl">
+    <!-- <div fusioncharts width="400" height="300" type="column2d" , datasource="{{dataSource}}" id="myCHart"></div> -->
+    <!-- <div>
+  <div id="columns">
+    <label ng-repeat="col in columns1"> <input
+    type="checkbox"
+    value="{{col.name}}"
+    ng-model="col.selected">
+   {{col.name}}</label>
+  </div>
+  <input type="button" text="Update" ng-click="pubCtrl.update()" value="Update" />
+  <div id="chart-container1">Fusion charts are rendered here </div>
+</div> -->
+    <!-- <div id="chart-container2">Fusion charts are rendered here </div>
+  <div id="chart-container3">Fusion charts are rendered here </div>
+  <div id="chart-container4">Fusion charts are rendered here </div>
+  <div id="chart-container5">Fusion charts are rendered here </div> -->
+    <div  ng-click="pubCtrl.showDiv = !pubCtrl.showDiv">
+        <h2><i ng-class="pubCtrl.showDiv ? 'fa fa-minus' : 'fa fa-plus'"></i>&nbsp;<strong> Add Chart</strong></h2>
+    </div>
+    <div class="ibm-container-body" ng-show="pubCtrl.showDiv==true">
+        <form name="formReport" novalidate class="ibm-column-form">
+          <p>
+              <label for="title">Title: </label>
+              <span><input name="title" ng-model="pubCtrl.formReport.title" required  type="text" style="width:500px;"/>  </span>
+                <span  class="ibm-item-note ibm-alert-link" ng-if="formReport.title.$error.required && formReport.title.$touched">Title is required!! </span>
+
+          </p>
+            <p>
+                <label for="dataSourceType">Data Source Type : </label>
+                <span>  <select  name="dataSourceType" ng-model="pubCtrl.formReport.dataSourceType" ng-options="key as value for (key , value) in pubCtrl.dataSourceTypes"></span>
+                </select>
+            </p>
+            <p class="form-group" ng-show="pubCtrl.formReport.dataSourceType=='json'">
+                <label for="url">Rest API Url: </label>
+                <span><input name="url" ng-model="pubCtrl.formReport.url" required  type="url" style="width:100%;"/>
+<span  class="ibm-item-note ibm-alert-link" ng-if="(formReport.url.$error.url || formReport.url.$error.required) && formReport.url.$touched">Not a valid url!! </span>
+                </span>
+            </p>
+            <button type="submit" class="ibm-btn-pri ibm-btn-gray-50 ibm-btn-small ibm-btn-blue-50" ng-disabled="formReport.$invalid" ng-click="pubCtrl.generateReport();">Submit</button>
+        </form>
+
+
+    </div>
+    <div class="ibm-rule ibm-alternate ibm-padding-bottom-1">
+        <hr>
+    </div>
+    <div class="ibm-columns">
+
+            <div class="ibm-col-5-2" ng-repeat="report in pubCtrl.reports" ng-class="$index%2==0 ? 'ibm-background-neutral-white-30' : 'ibm-background-neutral-white-20'">
+                <report num="report.id" , report-details="report" remove="pubCtrl.removeReport(id)"></report>
+            </div>
+
+    </div>
+
+</div>

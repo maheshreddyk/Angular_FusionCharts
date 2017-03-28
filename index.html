@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="//www.ibm.com/favicon.ico" />
+
+    <link rel="canonical" href="http://www.ibm.com/link_label_1.html" />
+    <meta name="geo.country" content="US" />
+    <meta name="dcterms.rights" content="© Copyright IBM Corp. 2017" />
+    <meta name="dcterms.date" content="REPLACE" />
+    <meta name="description" content="REPLACE" />
+    <meta name="keywords" content="REPLACE" />
+    <meta name="robots" content="index, follow" />
+
+    <meta name="generator" content="IBM Northstar Template Generator 2.0" />
+    <title>Angular Charts</title>
+
+    <script>
+		 digitalData = {
+		  "page":{
+		    "category":{
+		      "primaryCategory":"REPLACE"
+		    },
+		    "pageInfo":{
+		      "effectiveDate":"REPLACE",
+		      "expiryDate":"REPLACE",
+		      "language":"en-US",
+		      "publishDate":"REPLACE",
+		      "publisher":"IBM Corporation",
+		      "version":"v18",
+		      "pageID":"REPLACE",
+		      "ibm":{
+		        "contentDelivery":"HTML",
+		        "contentProducer":"IBM Northstar Template Generator 2.0",
+		        "country":"US",
+		        "industry":"REPLACE",
+		        "owner":"REPLACE",
+		        "siteID":"REPLACE",
+		        "subject":"REPLACE",
+		        "type":"REPLACE"
+		      }
+		    }
+		  }
+		};
+	 </script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/common.css">
+    <script src="//1.www.s81c.com/common/stats/ida_stats.js"></script>
+    <link href="//1.www.s81c.com/common/v18/css/www.css" rel="stylesheet" />
+    <link href="//1.www.s81c.com/common/v18/css/forms.css" rel="stylesheet">
+    <script src="//1.www.s81c.com/common/v18/js/www.js"></script>
+    <script type="text/javascript">
+        IBMCore.common.util.config.set({
+            "masthead": {
+                "type": "alternate"
+            },
+            "footer": {
+                "type": "alternate",
+                "socialLinks": {
+                    "enabled": false
+                }
+            }
+        });
+    </script>
+
+</head>
+
+<body ng-app="app" ng-strict-di id="ibm-com" class="ibm-type">
+
+    <div id="ibm-top" class="ibm-landing-page">
+
+
+        <!-- MASTHEAD_BEGIN -->
+        <div id="ibm-masthead" role="banner" aria-label="IBM">
+            <div id="ibm-mast-options">
+                <ul role="toolbar" aria-labelledby="ibm-masthead">
+                    <li id="ibm-geo" role="presentation">
+                        <a href="//www.ibm.com/planetwide/select/selector.html">United States</a></li>
+                </ul>
+            </div>
+            <div id="ibm-universal-nav">
+
+                <div id="ibm-home"><a href="//www.ibm.com/us-en/">IBM®</a></div>
+                <ul id="ibm-menu-links" role="toolbar" aria-label="Site map">
+                    <li><a href="//www.ibm.com/sitemap/us/en/">Site map</a></li>
+                </ul>
+
+                <div id="ibm-search-module" role="search" aria-labelledby="ibm-masthead">
+                    <form id="ibm-search-form" action="//www.ibm.com/Search/" method="get">
+                        <p>
+                            <label for="q"><span class="ibm-access">Search</span></label>
+                            <input type="text" maxlength="100" value="" name="q" id="q" />
+                            <input type="hidden" value="17" name="v" />
+                            <input type="hidden" value="utf" name="en" />
+                            <input type="hidden" value="en" name="lang" />
+                            <input type="hidden" value="us" name="cc" />
+                            <input type="submit" id="ibm-search" class="ibm-btn-search" value="Submit" />
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- MASTHEAD_END -->
+        <div id="ibm-content-wrapper">
+
+            <!-- LEADSPACE_BEGIN -->
+
+
+            <main role="main" aria-labelledby="ibm-pagetitle-h1">
+                <div id="ibm-pcon">
+                    <div id="ibm-content">
+                        <div id="ibm-content-body">
+                            <div id="ibm-content-main">
+
+                                <div class="ibm-columns">
+                                    <div class="ibm-col-5-1">
+                                        <nav role="navigation" aria-label="__REPLACE_ME__">
+                                            <div id="ibm-navigation">
+                                                <ul id="ibm-primary-links" role="tree" aria-labelledby="ibm-pagetitle-h1">
+                                                    <li role="presentation" id="ibm-overview">
+                                                        <a role="treeitem" href="javascript:;">Home</a>
+                                                    </li>
+
+                                                    <li role="presentation">
+                                                        <a aria-selected="true" role="treeitem" href="javascript:;">Generate Charts</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                        </nav>
+                                    </div>
+
+                                    <div class="ibm-col-5-4">
+
+                                        <ui-view>
+                                            <div class="text-center initial-loading">
+                                              <p class="ibm-h1"> <span class="ibm-spinner"></span> Loading</p>
+                                            </div>
+                                        </ui-view>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <div id="ibm-related-content">
+                <div id="ibm-merchandising-module">
+                    <!-- MTE will generate this -->
+                    <!-- <aside role="complementary" aria-label="Related content"> MTE dynamic modules populate in here. <aside> -->
+                    <!-- /MTE -->
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER_BEGIN -->
+        <div id="ibm-footer-module">
+        </div>
+        <footer role="contentinfo" aria-label="IBM">
+            <div id="ibm-footer">
+                <h2 class="ibm-access">Footer links
+</h2>
+                <ul>
+                    <li><a href="//www.ibm.com/contact/us/en/">Contact</a></li>
+                    <li><a href="//www.ibm.com/privacy/us/en/">Privacy</a></li>
+                    <li><a href="//www.ibm.com/legal/us/en/">Terms of use</a></li>
+                    <li><a href="//www.ibm.com/accessibility/us/en/">Accessibility</a></li>
+                </ul>
+            </div>
+        </footer>
+        <!-- FOOTER_END -->
+    </div>
+
+<script src="//1.www.s81c.com/common/v18/js/forms.js"></script>
+
+    <!-- Libs -->
+    <script src="lib/test.js"></script>
+    <script src="lib/jquery-2.1.4.min.js"></script>
+    <!-- <script src="lib/bootstrap.min.js"></script> -->
+    <script src="http://static.fusioncharts.com/code/latest/fusioncharts.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-ui-router.min.js"></script>
+    <script src="lib/angular-fusioncharts.min.js"></script>
+    <script type="text/javascript" src="http://static.fusioncharts.com/code/latest/themes/fusioncharts.theme.fint.js?cacheBust=56"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+
+    <!-- <script src="http://static.fusioncharts.com/code/latest/fusioncharts.js"></script>
+    <script src="http://static.fusioncharts.com/code/latest/fusioncharts.charts.js"></script>
+    <script src="http://static.fusioncharts.com/code/latest/themes/fusioncharts.theme.fint.js"></script> -->
+
+    <!-- Main  Module -->
+    <script src="src/main.module.js"></script>
+
+    <!-- Common Module -->
+    <script src="src/common/common.module.js"></script>
+    <script src="src/common/localStorage.service.js"></script>
+    <script src="src/common/loader/loading.component.js"></script>
+    <script src="src/common/loader/loading.interceptor.js"></script>
+
+
+    <!-- Public Module -->
+    <script src="src/public/public.module.js"></script>
+    <script src="src/public/public.routes.js"></script>
+    <script src="src/public/public.controller.js"></script>
+    <script src="src/public/chart.controller.js"></script>
+    <script src="src/public/report/report.component.js"></script>
+    <script src="src/public/data/api.service.js"></script>
+
+
+    <!-- ADMIN SITE -->
+
+    <!--Application files -->
+
+</body>
+
+</html>
